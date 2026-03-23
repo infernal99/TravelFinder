@@ -65,5 +65,5 @@ app.delete("/favorites/:id", (req, res) => {
 
 // iniciar servidor
 app.listen(PORT, () => {
-    console.log(`Servidor executant-se a http://localhost:3000`);
+    console.log(`Servidor executant-se a http://localhost:${PORT}`);
 });
