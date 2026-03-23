@@ -48,7 +48,7 @@ async function searchCountry() {
 // afegir favorit
 async function addFavorite(country, capital, population, flag) {
 
-    await fetch("http://localhost:3000/favorites", {
+    await fetch("/favorites"), {
 
         method: "POST",
 
@@ -62,7 +62,7 @@ async function addFavorite(country, capital, population, flag) {
             population,
             flag
         })
-    });
+    };
 
     loadFavorites();
 }
@@ -70,7 +70,7 @@ async function addFavorite(country, capital, population, flag) {
 // carregar favorites
 async function loadFavorites() {
 
-    const response = await fetch("http://localhost:3000/favorites");
+    const response = await fetch("/favorites");
     const data = await response.json();
 
     const list = document.getElementById("favorites");
@@ -96,7 +96,7 @@ async function loadFavorites() {
 // eliminar
 async function deleteFavorite(id) {
 
-    await fetch(`http://localhost:3000/favorites/${id}`, {
+    await fetch(`/favorites/${id}`, {
         method: "DELETE"
     });
 
